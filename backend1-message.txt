@@ -1,0 +1,62 @@
+*   Trying 52.216.134.37...
+* TCP_NODELAY set
+* Connected to s3.amazonaws.com (52.216.134.37) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [87 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [3087 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: C=US; ST=Washington; L=Seattle; O=Amazon.com Inc.; CN=s3.amazonaws.com
+*  start date: Aug  2 00:00:00 2018 GMT
+*  expire date: Oct 25 12:00:00 2019 GMT
+*  subjectAltName: host "s3.amazonaws.com" matched cert's "s3.amazonaws.com"
+*  issuer: C=US; O=DigiCert Inc; OU=www.digicert.com; CN=DigiCert Baltimore CA-2 G2
+*  SSL certificate verify ok.
+} [5 bytes data]
+> GET /seis665/message.json HTTP/1.1
+> Host: s3.amazonaws.com
+> User-Agent: curl/7.55.1
+> Accept: */*
+> 
+{ [5 bytes data]
+< HTTP/1.1 200 OK
+< x-amz-id-2: O6ClVdWiKTtZrP8meSEs1gsZ0Ao6wx67OGmqEX2YqEpDGglC9ddR4djasVZvnxSPteR0fSYdkqE=
+< x-amz-request-id: 8458CF12B9669D73
+< Date: Tue, 02 Oct 2018 02:31:15 GMT
+< Last-Modified: Tue, 16 Aug 2016 02:39:51 GMT
+< ETag: "6aae609b7b3e27d368146abe1166307a"
+< x-amz-version-id: Y2WNZYIAI6zRvhm7ZXIcTpCXdYQYcUX5
+< Accept-Ranges: bytes
+< Content-Type: application/octet-stream
+< Content-Length: 42
+< Server: AmazonS3
+< 
+{ [5 bytes data]
+* Connection #0 to host s3.amazonaws.com left intact
+{ "message" : "Cloud computing is fun!" }
